@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'intro/script'
+
   root "board#index"
   get 'board/index'
   post "/write"=>"board#write"

@@ -1,3 +1,4 @@
+10.times{Secondpost.create(:content=>Faker::Name.name)
 new_post=Secondpost.new
 new_post.content="첫번째 글입니다!"
 new_post.save
@@ -17,6 +18,8 @@ reply = Reply.new
 reply.content ="세 번째 댓글"
 reply.secondpost=new_post
 reply.save
+
+
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
