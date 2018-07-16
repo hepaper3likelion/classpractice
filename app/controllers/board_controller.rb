@@ -3,9 +3,9 @@ class BoardController < ApplicationController
   end
   
   def write
-    new_post=Secondpost.new
-    new_post.content=params[:content]
-    new_post.save
+    @one_post=Secondpost.new
+    @one_post.content=params[:content]
+    @one_post.save
     
     redirect_to "/list"
   end
@@ -32,13 +32,5 @@ class BoardController < ApplicationController
     redirect_to"/list"
   end
   
-  def reply_write
-    reply=Reply.new
-    reply.content=params[:content]
-    reply.post_id=params[:id_of_post]
-    reply.save
-    
-    redirect_to '/list'
-  end
   
 end

@@ -11,14 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170504094834) do
-
-  create_table "replies", force: :cascade do |t|
-    t.text     "content"
-    t.integer  "secondpost_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
+ActiveRecord::Schema.define(version: 20170413015012) do
 
   create_table "secondposts", force: :cascade do |t|
     t.string   "content"
